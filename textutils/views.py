@@ -12,3 +12,15 @@ def about(request):
 
 def index(request):
     return HttpResponse('''<h1>hemangi</h1><a href="https://www.wesocioo.com/">hii</a> ''')
+
+def index(reuest):
+    return HttpResponse("home")
+
+def removepunc(reuest):
+    return HttpResponse("remove punc")
+
+def capitalizefirst(reuest):
+    return HttpResponse("capfirst")
+
+
+
