@@ -12,12 +12,13 @@ from django.shortcuts import render
 
 
 def index(request):
-    params = {'name':'hemangi','place':'mars'}
+    params = {'name':'analyzer text','place':'mars'}
     return render(request,'index.html',params)
     #return HttpResponse("home")
 
 def removepunc(request):
-    return HttpResponse("remove punc")
+    print(request.GET.get('text','default'))
+    return HttpResponse("removepunc")
 
 def capfirst(request):
     return HttpResponse("capitalize first")
