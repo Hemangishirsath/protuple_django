@@ -12,13 +12,20 @@ from django.shortcuts import render
 
 
 def index(request):
-    params = {'name':'analyzer text','place':'mars'}
-    return render(request,'index.html',params)
-    #return HttpResponse("home")
+    return render(request,'index.html')
+    #return HttpResponse("hello")
 
-def removepunc(request):
-    print(request.GET.get('text','default'))
-    return HttpResponse("removepunc")
+
+def analyze(request):
+    djtext = request.GET.get('text','defualt')
+    removepunc = request.GET.get('removepunc','off')
+    print(removepunc)
+    print(djtext)
+    analyze = djtext
+    params ={'purpose':'remove punctuations','analyzed text':'analyze'}
+    return render(request,'analyze.html',params)
+    #return HttpResponse("remove punc")
+'''
 
 def capfirst(request):
     return HttpResponse("capitalize first")
@@ -31,6 +38,8 @@ def spaceremove(request):
 
 def charcount(request):
     return HttpResponse("charcount")
+   
+    '''
 
 
 

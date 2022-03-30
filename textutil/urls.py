@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .import views
+
 '''
 
 urlpatterns = [
@@ -27,11 +28,11 @@ urlpatterns = [
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name="index"),
-    path('removepunc',views.removepunc,name="removepunc"),
-    path('capitalizerfirst',views.capfirst,name="capitizerfirst"),
-    path('newlineremove',views.newlineremove,name="newlineremove"),
-    path('spaceremove',views.spaceremove,name="spaceremove"),
-    path('charcount',views.charcount,name="charcount"),
+    path('analyze',views.analyze,name="analyze"),
+    #path('capitalizerfirst',views.capfirst,name="capitizerfirst"),
+    #path('newlineremove',views.newlineremove,name="newlineremove"),
+    #path('spaceremove',views.spaceremove,name="spaceremove"),
+    #path('charcount',views.charcount,name="charcount"),
 
 
 
