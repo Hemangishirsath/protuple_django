@@ -29,6 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name="index"),
     path('analyze',views.analyze,name="analyze"),
+    path('ex1',views.ex1,name="analyze"),
     #path('capitalizerfirst',views.capfirst,name="capitizerfirst"),
     #path('newlineremove',views.newlineremove,name="newlineremove"),
     #path('spaceremove',views.spaceremove,name="spaceremove"),
