@@ -41,6 +41,7 @@ def ex1(request):
     params = {'purpose': 'changed to upper', 'analyzed_text': analyzed}
     return render(request, 'analyze.html', params)
     #params ={'purpose':'remove punctuations','analyzed text':'analyze'}
+
     if removepunc == "on":
         punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
         analyzed = ""
