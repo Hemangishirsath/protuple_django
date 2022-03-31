@@ -46,7 +46,7 @@ def ex1(request):
             analyzed = analyzed + char
     params = {'purpose': 'changed to upper', 'analyzed_text': analyzed}
     return render(request, 'analyze.html', params)
-    elif fullcaps == "on"):
+    elif fullcaps == "on"
     analyzed = ""
     for char in djtext:
         #analyzed = analyzed + char.upper()
