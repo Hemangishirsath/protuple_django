@@ -24,12 +24,9 @@ def ex1(request):
     <a href="https://www.hindustantimes.com/"> News </a> <br>
    # <a href="https://www.google.com/"> Google </a> <br>
     reutrn HttpResponse(s)'''
-    #sites = ['''<h1>For Entertainment </h1><a href = "https://www.youtube.com" >youtube video</a>''',
-             '''<h1>For Interaction </h1><a href = "https://www.facebook.com" >Facebook</a>''',
-             '''<h1>For Insight   </h1><a href = "https://www.ted.com/talks" >Ted Talk</a>''',
-             '''<h1>For Internship   </h1><a href="https://internshala.com" >Intenship</a>''',
-             ]
-   # return HttpResponse((sites))
+
+
+
 
  def analyzed(request):
     djtext = request.GET.get('text','defualt')
@@ -37,22 +34,14 @@ def ex1(request):
     fullcaps= request.GET.get('fullcaps','off')
     print(removepunc)
     print(djtext)
-    if removepunc == "on":
-    #analyze = djtext
-    punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
     analyzed = ""
     for char in djtext:
-        if char not in punctuations:
+
             analyzed = analyzed + char
     params = {'purpose': 'changed to upper', 'analyzed_text': analyzed}
     return render(request, 'analyze.html', params)
-    elif fullcaps == "on"
-    analyzed = ""
-    for char in djtext:
-        #analyzed = analyzed + char.upper()
 
-    else
-    return HttpResponse('Error')
+
     #params ={'purpose':'remove punctuations','analyzed text':'analyze'}
     #return render(request,'analyze.html',params)
     #return HttpResponse("remove punc")
